@@ -24,7 +24,7 @@ that can be removed each interval to comply with common API restrictions such as
 A simple example allowing 150 requests per hour:
 
 ```javascript
-import { RateLimiter } from "https://raw.githubusercontent.com/stolpa4/rateLimiter/v1.0.0/rateLimiter/mod.ts";
+import { RateLimiter } from "https://raw.githubusercontent.com/stolpa4/rateLimiter/v1.0.1/rateLimiter/mod.ts";
 
 // Allow 150 requests per hour (the Twitter search limit). Also understands
 // 'second', 'minute', 'day', or a number of milliseconds
@@ -43,7 +43,7 @@ async function sendRequest() {
 Another example allowing one message to be sent every 250ms:
 
 ```javascript
-import { RateLimiter } from "https://raw.githubusercontent.com/stolpa4/rateLimiter/v1.0.0/rateLimiter/mod.ts";
+import { RateLimiter } from "https://raw.githubusercontent.com/stolpa4/rateLimiter/v1.0.1/rateLimiter/mod.ts";
 
 const limiter = new RateLimiter({ tokensPerInterval: 1, interval: 250 });
 
@@ -59,7 +59,7 @@ currently in effect before the promise is resolved, but if you pass in
 `remainingRequests` set to -1:
 
 ```javascript
-import { RateLimiter } from "https://raw.githubusercontent.com/stolpa4/rateLimiter/v1.0.0/rateLimiter/mod.ts";
+import { RateLimiter } from "https://raw.githubusercontent.com/stolpa4/rateLimiter/v1.0.1/rateLimiter/mod.ts";
 
 const limiter = new RateLimiter({
   tokensPerInterval: 150,
@@ -84,7 +84,7 @@ TokenBucket. This will return immediately with a boolean value indicating if the
 token removal was successful.
 
 ```javascript
-import { RateLimiter } from "https://raw.githubusercontent.com/stolpa4/rateLimiter/v1.0.0/rateLimiter/mod.ts";
+import { RateLimiter } from "https://raw.githubusercontent.com/stolpa4/rateLimiter/v1.0.1/rateLimiter/mod.ts";
 
 const limiter = new RateLimiter({ tokensPerInterval: 10, interval: "second" });
 
@@ -99,7 +99,7 @@ To get the number of remaining tokens **outside** the `removeTokens` promise,
 simply use the `getTokensRemaining` method.
 
 ```javascript
-import { RateLimiter } from "https://raw.githubusercontent.com/stolpa4/rateLimiter/v1.0.0/rateLimiter/mod.ts";
+import { RateLimiter } from "https://raw.githubusercontent.com/stolpa4/rateLimiter/v1.0.1/rateLimiter/mod.ts";
 
 const limiter = new RateLimiter({ tokensPerInterval: 1, interval: 250 });
 
@@ -111,7 +111,7 @@ console.log(limiter.getTokensRemaining());
 Using the token bucket directly to throttle at the byte level:
 
 ```javascript
-import { TokenBucket } from "https://raw.githubusercontent.com/stolpa4/rateLimiter/v1.0.0/rateLimiter/mod.ts";
+import { TokenBucket } from "https://raw.githubusercontent.com/stolpa4/rateLimiter/v1.0.1/rateLimiter/mod.ts";
 
 const BURST_RATE = 1024 * 1024 * 150; // 150KB/sec burst rate
 const FILL_RATE = 1024 * 1024 * 50; // 50KB/sec sustained rate
