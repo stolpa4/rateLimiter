@@ -8,7 +8,7 @@ Super-trivial rate limiter, without a dependency, and with imprecise timing.
 - [x] Clock routines
 - [x] Token bucket routines
 - [x] Rate limiter routines
-- [ ] Tests for token bucket
-- [ ] Tests for rate limiter
+- [x] Tests for token bucket
+- [x] Tests for rate limiter
 - [ ] Readme + howto
 - [ ] License (MIT)
