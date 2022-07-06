@@ -1,9 +1,13 @@
-Rate Limiter
-============
+# Rate Limiter
 
+Super-trivial rate limiter, without a dependency, and with imprecise timing.
 
-TODO
-----
+## TODO
 
-- [ ] Study https://github.com/jhurliman/node-rate-limiter
-- [ ] Understand how to write Deno tests
+- [x] Study https://github.com/jhurliman/node-rate-limiter
+- [x] Clock routines
+- [ ] Token bucket routines
+- [ ] Rate limiter routines
+- [ ] Tests for token bucket
+- [ ] Tests for rate limiter
+- [ ] ??
