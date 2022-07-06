@@ -10,5 +10,5 @@ Super-trivial rate limiter, without a dependency, and with imprecise timing.
 - [x] Rate limiter routines
 - [x] Tests for token bucket
 - [x] Tests for rate limiter
+- [x] License (MIT)
 - [ ] Readme + howto
-- [ ] License (MIT)
