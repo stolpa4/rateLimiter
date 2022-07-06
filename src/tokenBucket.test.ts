@@ -1,4 +1,4 @@
-import { TokenBucket } from "./tockenBucket.ts";
+import { TokenBucket } from "./tokenBucket.ts";
 import { wait } from "./clock.ts";
 import { asserts } from "./deps.ts";
 

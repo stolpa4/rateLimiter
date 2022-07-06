@@ -1,5 +1,5 @@
 import { RateLimiter } from "./rateLimiter.ts";
-import { Interval } from "./tockenBucket.ts";
+import { Interval } from "./tokenBucket.ts";
 import { asserts } from "./deps.ts";
 
 Deno.test("RateLimiter", async (t) => {

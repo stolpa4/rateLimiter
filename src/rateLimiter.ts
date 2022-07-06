@@ -1,4 +1,4 @@
-import { Interval, TokenBucket } from "./tockenBucket.ts";
+import { Interval, TokenBucket } from "./tokenBucket.ts";
 import { getMilliseconds, wait } from "./clock.ts";
 
 export type RateLimiterOpts = {
