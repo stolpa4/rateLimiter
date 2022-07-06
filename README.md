@@ -7,7 +7,8 @@ Super-trivial rate limiter, without a dependency, and with imprecise timing.
 - [x] Study https://github.com/jhurliman/node-rate-limiter
 - [x] Clock routines
 - [x] Token bucket routines
-- [ ] Rate limiter routines
+- [x] Rate limiter routines
 - [ ] Tests for token bucket
 - [ ] Tests for rate limiter
-- [ ] ??
+- [ ] Readme + howto
+- [ ] License (MIT)
