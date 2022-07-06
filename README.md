@@ -1,11 +1,13 @@
 # Rate Limiter
 
-Super-trivial rate limiter for Deno, without a dependency. Timing is imprecise, but ok for high-level web tasks.
-
+Super-trivial rate limiter for Deno, without a dependency. Timing is imprecise,
+but ok for high-level web tasks.
 
 # DISCLAIMER
-This repo is almost a line-to-line copy of [this repo](https://github.com/jhurliman/node-rate-limiter) (commit: [`9bbd3b036c33e974d51d7b40ddeee13e71bb69b0`](https://github.com/jhurliman/node-rate-limiter/tree/9bbd3b036c33e974d51d7b40ddeee13e71bb69b0)).
 
+This repo is almost a line-to-line copy of
+[this repo](https://github.com/jhurliman/node-rate-limiter) (commit:
+[`9bbd3b036c33e974d51d7b40ddeee13e71bb69b0`](https://github.com/jhurliman/node-rate-limiter/tree/9bbd3b036c33e974d51d7b40ddeee13e71bb69b0)).
 
 # limiter
 
@@ -86,10 +88,11 @@ import { RateLimiter } from "https://raw.githubusercontent.com/stolpa4/rateLimit
 
 const limiter = new RateLimiter({ tokensPerInterval: 10, interval: "second" });
 
-if (limiter.tryRemoveTokens(5))
-  console.log('Tokens removed');
-else
-  console.log('No tokens removed');
+if (limiter.tryRemoveTokens(5)) {
+  console.log("Tokens removed");
+} else {
+  console.log("No tokens removed");
+}
 ```
 
 To get the number of remaining tokens **outside** the `removeTokens` promise,
@@ -119,7 +122,7 @@ const FILL_RATE = 1024 * 1024 * 50; // 50KB/sec sustained rate
 const bucket = new TokenBucket({
   bucketSize: BURST_RATE,
   tokensPerInterval: FILL_RATE,
-  interval: "second"
+  interval: "second",
 });
 
 async function handleData(myData) {
@@ -131,10 +134,10 @@ async function handleData(myData) {
 ## Additional Notes
 
 Both the token bucket and rate limiter should be used with a message queue or
-some way of preventing multiple simultaneous calls to removeTokens().
-Otherwise, earlier messages may get held up for long periods of time if more
-recent messages are continually draining the token bucket. This can lead to
-out of order messages or the appearance of "lost" messages under heavy load.
+some way of preventing multiple simultaneous calls to removeTokens(). Otherwise,
+earlier messages may get held up for long periods of time if more recent
+messages are continually draining the token bucket. This can lead to out of
+order messages or the appearance of "lost" messages under heavy load.
 
 ## License
 
