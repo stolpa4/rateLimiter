@@ -3,6 +3,10 @@
 Super-trivial rate limiter for Deno, without a dependency. Timing is imprecise,
 but ok for high-level web tasks.
 
+## TODO:
+- [ ] Provide normal tests (100 % coverage)
+- [ ] Enable nodejs support: https://github.com/denoland/dnt
+
 # DISCLAIMER
 
 This repo is almost a line-to-line copy of

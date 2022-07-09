@@ -1,0 +1,20 @@
+{
+  "fmt": {
+    "files": {
+      "include": ["rateLimiter/"],
+      "exclude": ["coverage/"]
+    },
+    "options": {
+      "useTabs": false,
+      "lineWidth": 120,
+      "indentWidth": 4,
+      "singleQuote": true,
+      "proseWrap": "always"
+    }
+  },
+  "tasks": {
+    "fmt": "deno fmt",
+    "test": "deno test --coverage=coverage",
+    "coverage": "deno coverage coverage"
+  }
+}
