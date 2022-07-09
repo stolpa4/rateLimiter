@@ -1,6 +1,6 @@
-import { TokenBucket } from './tokenBucket.ts';
-import { wait } from './clock.ts';
-import { asserts } from './deps.ts';
+import { TokenBucket } from '../rateLimiter/tokenBucket.ts';
+import { wait } from '../rateLimiter/clock.ts';
+import { asserts } from '../rateLimiter/deps.ts';
 
 const TIMING_EPSILON = 10;
 

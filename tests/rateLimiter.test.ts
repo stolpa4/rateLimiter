@@ -1,6 +1,6 @@
-import { RateLimiter } from './rateLimiter.ts';
-import { Interval } from './tokenBucket.ts';
-import { asserts } from './deps.ts';
+import { RateLimiter } from '../rateLimiter/rateLimiter.ts';
+import { Interval } from '../rateLimiter/tokenBucket.ts';
+import { asserts } from '../rateLimiter/deps.ts';
 
 Deno.test('RateLimiter', async (t) => {
     await t.step('Invalid interval', () => {
